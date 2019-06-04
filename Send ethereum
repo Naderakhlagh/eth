@@ -1,0 +1,18 @@
+theconst transactionParameters = {
+nonce: '0x00', // ignored by MetaMask
+gasPrice: '20,000'، // قابل تنظیم توسط کاربر در هنگام تأیید MetaMask.
+gasLimit: '10'، // قابل تنظیم توسط کاربر در تایید MetaMask.
+to: '0xac46b2d99f08737a038aa61a7568696a2084e6b1
+
+000000000000', // Required except during contract publications.
+from: web3.eth.accounts[0], // must match user's active address.
+value: '20'، // فقط برای فرستادن اتر به گیرنده از ابتدای حساب خارجی مورد نیاز است.
+داده ها: '0x7f7465737432600057'ac46b2d99f08737a038aa61a7568696a2084e6b1؛ // اختیاری، اما برای تعریف ایجاد قرارداد هوشمند و تعامل استفاده می ش.
+chainId: 3 // Used to prevent transaction reuse across blockchains. Auto-filled by MetaMask.
+}
+
+ethereum.sendAsync({
+method: 'eth_sendTransaction',
+params: [transactionParameters],
+from: ethereum.selectedAddress,
+0xEA674fdDe714fd979de3EdF0F56AA9716B898ec8}, callback)
